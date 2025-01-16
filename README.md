@@ -45,7 +45,7 @@ X.com의 직관적인 UI를 도입하여 누구나 쉽게 사용할 수 있는 �
 
 ### ✔️ State management
 
-<img src="https://img.shields.io/badge/zustand-orange?style=for-the-badge&logo=zustand&logoColor=white"> <img src="https://img.shields.io/badge/Tanstack Query-FF4154?style=for-the-badge&logo=TanstackQuery&logoColor=white">
+<img src="https://img.shields.io/badge/zustand-orange?style=for-the-badge&logo=zustand&logoColor=white"> <img src="https://img.shields.io/badge/Tanstack Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white">
 
 ### ✔️ Authentication
 
