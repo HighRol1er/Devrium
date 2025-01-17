@@ -5,13 +5,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "analyze": "cross-env ANALYZE=true npm run build",
-    "test": "vitest",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "test": "vitest"
   },
   "dependencies": {
     "-": "^0.0.1",

@@ -17,8 +17,8 @@ export async function GET() {
       comments: { none: {} },
     },
     include: {
-      category: true, // 관련된 카테고리 데이터 포함 (optional)
-      comments: true, // 관련된 댓글 포함 (optional)
+      category: true,
+      comments: true,
     },
   });
 
