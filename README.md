@@ -34,15 +34,87 @@
 AI를 활용하여 특정 시간 내에 답글이 달리지 않을 경우 AI가 자동으로 답변을 제공하도록 하여 사용자들이 빠르게 도움을 받을 수 있는 환경을 마련했습니다. 
 X.com의 직관적인 UI를 도입하여 누구나 쉽게 접근하고 사용할 수 있는 플랫폼을 구현했습니다.
 
-# 개발 기간 
-| 기간(4주)| 내용|
-|-|-|
-| 2024.12.18 ~ 2024.12.21| ERD, 와이어프레임, API 명세서 작성 |
-| 2023.12.22 ~ 2023.12.25 | 로그인 구현|
-| 2023.12.26 ~ 2024.01.08 | 기능 구현 및 디자인|
-| 2024.01.09 ~ 2024.01.13 | 최적화 및 리팩토링|
-
 # 🛠️ Stack
+
+
+<details>
+<summary>📁 package.json</summary>
+<div markdown="1">
+
+```json
+{
+  "dependencies": {
+    "-": "^0.0.1",
+    "@auth/prisma-adapter": "^2.7.4",
+    "@eslint/eslintrc": "^3.2.0",
+    "@hookform/resolvers": "^3.9.1",
+    "@next/bundle-analyzer": "^15.1.4",
+    "@prisma/client": "^6.1.0",
+    "@radix-ui/react-alert-dialog": "^1.1.4",
+    "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-select": "^2.1.4",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@radix-ui/react-toast": "^1.2.4",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.47.9",
+    "@tanstack/react-query": "^5.62.8",
+    "@tanstack/react-query-devtools": "^5.62.10",
+    "bcryptjs": "^2.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.468.0",
+    "next": "15.1.0",
+    "next-auth": "^5.0.0-beta.25",
+    "next-themes": "^0.4.4",
+    "openai": "^4.78.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-dropzone": "^14.3.5",
+    "react-hook-form": "^7.54.1",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "remark-gfm": "^4.0.0",
+    "save": "^2.9.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.1",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.62.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.1.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-storybook": "^0.11.2",
+    "jsdom": "^26.0.0",
+    "postcss": "^8",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "prisma": "^6.1.0",
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.8"
+  }
+}
+```
+  </div> 
+</details>
 
 ### ✔️ Language & Framework
 
@@ -117,7 +189,7 @@ X.com의 직관적인 UI를 도입하여 누구나 쉽게 접근하고 사용할
 **2. 간결하고 효율적인 폼 관리**
   - react-hook-form을 사용해 최소한의 코드로 폼 상태를 관리
 
-# 기능
+# 주요 기능 및 구현 경험
 ## Auth
   - Auth.js를 활용한 Google 소셜 로그인 기능 구현
   - JWT를 통한 사용자 세션 관리
@@ -151,7 +223,6 @@ X.com의 직관적인 UI를 도입하여 누구나 쉽게 접근하고 사용할
 
 ## API Documentation
 ![api-recipt](https://github.com/user-attachments/assets/79ca694e-e77a-4673-9d8b-2f89a9541e14)
-
 
 # 화면 구성 
 | Landing | Login |
