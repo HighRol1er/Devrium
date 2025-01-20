@@ -7,13 +7,13 @@ const prisma = new PrismaClient();
 const THIRTY_MINUTES = 30 * 60 * 1000; // 30분
 
 export async function GET() {
-  const now = new Date();
-  const threshold = new Date(now.getTime() - THIRTY_MINUTES);
+  // const now = new Date();
+  // const threshold = new Date(now.getTime() - THIRTY_MINUTES);
 
   const unansweredPosts = await prisma.post.findMany({
     where: {
       category: { name: 'question' }, // 카테고리 이름이 'question'
-      createdAt: { gte: threshold },
+      // createdAt: { gte: threshold },
       comments: { none: {} },
     },
     include: {
@@ -21,6 +21,13 @@ export async function GET() {
       comments: true,
     },
   });
+
+  if (unansweredPosts.length === 0) {
+    return NextResponse.json({
+      message: 'There is no post',
+      unansweredPosts,
+    });
+  }
 
   console.log('unansweredPosts', unansweredPosts);
 

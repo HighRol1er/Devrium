@@ -6,13 +6,8 @@ export async function middleware(req: NextRequest) {
   const token = await getToken({
     req,
     secret: process.env.AUTH_SECRET,
-    cookieName: '__Secure-authjs.session-token',
+    // cookieName: '__Secure-authjs.session-token' || 'authjs.session-token',
   });
-
-  // Debugging
-  console.log('Request URL:', req.url);
-  console.log('Headers:', req.headers.get('cookie'));
-  console.log('Token:', token);
 
   if (!token) {
     const redirectUrl = new URL('/', req.url);
