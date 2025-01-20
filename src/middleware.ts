@@ -7,7 +7,12 @@ export async function middleware(req: NextRequest) {
     req,
     secret: process.env.AUTH_SECRET,
   });
-  console.log('token >>>', token);
+
+  // Debugging
+  console.log('Request URL:', req.url);
+  console.log('Headers:', req.headers.get('cookie'));
+  console.log('Token:', token);
+
   if (!token) {
     const redirectUrl = new URL('/', req.url);
     return NextResponse.redirect(redirectUrl);
