@@ -48,15 +48,15 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       return session;
     },
   },
-  cookies: {
-    sessionToken: {
-      name: `next-auth.session-token`, // 사용자 정의 이름
-      options: {
-        httpOnly: true,
-        sameSite: 'lax',
-        path: '/',
-        secure: true, // HTTPS 환경에서는 다시 true로 설정
-      },
-    },
-  },
+  // cookies: {
+  //   sessionToken: {
+  //     name: `next-auth.session-token`, // 사용자 정의 이름
+  //     options: {
+  //       httpOnly: true,
+  //       sameSite: 'lax',
+  //       path: '/',
+  //       secure: true, // HTTPS 환경에서는 다시 true로 설정
+  //     },
+  //   },
+  // },
 });
