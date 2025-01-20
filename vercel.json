@@ -1,12 +1,12 @@
 {
   "functions": {
-    "api/auto-answer/route.ts": {
+    "api/cron/route.ts": {
       "runtime": "nodejs18.x"
     }
   },
   "crons": [
     {
-      "path": "/api/auto-answer",
+      "path": "/api/cron",
       "schedule": "*/10 * * * *"
     }
   ]
